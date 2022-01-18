@@ -1,0 +1,6 @@
+.transition {
+  transition: opacity 2s;
+}
+.reset {
+  opacity: 1;
+}
