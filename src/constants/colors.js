@@ -1,4 +1,4 @@
-const colors = ["blue", "red", "orange", "black", "yellow", "green"];
+export const colors = ["blue", "red", "orange", "black", "yellow", "green"];
 export const cardsColors = [...colors, ...colors];
 
 export let randomize = (arr, n) => {

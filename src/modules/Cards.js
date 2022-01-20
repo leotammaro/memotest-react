@@ -24,7 +24,7 @@ function Cards() {
 
   useEffect(() => {
     setRandomCards(randomize(cardsColors, cardsColors.length));
-  }, [randomCards]);
+  }, []);
 
   useEffect(() => {
     if (foundCards.length === cardsColors.length) {
@@ -86,6 +86,7 @@ function Cards() {
                 opacity={foundCards.includes(i) ? "0" : "1"}
                 border={"1px solid black"}
                 borderRadius={"5px"}
+                data-testid={cardColor}
                 bgColor={
                   i === selectedCard || i === selectedLastCard
                     ? cardColor
@@ -104,7 +105,7 @@ function Cards() {
           })}
         </Grid>
       ) : (
-        <Button w={250} onClick={resetGameButton}>
+        <Button w={250} onClick={resetGameButton} data-testid="reset">
           Reset Game
         </Button>
       )}
